@@ -12,4 +12,4 @@ if __name__ == '__main__':
     a = int(argv[1])
     b = int(argv[3])
     c = ops[argv[2]](a, b)
-    print("{} {} {} = {}".format(a, argv[2], b, c))
+    print("{:d} {:s} {:d} = {:d}".format(a, argv[2], b, c))
