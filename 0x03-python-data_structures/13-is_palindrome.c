@@ -4,12 +4,9 @@
 
 int is_palindrome(listint_t **head)
 {
-    listint_t   *h, *tmp = NULL;
+    listint_t   *h = *head, *tmp = NULL;
     int         i = 0, n = 0;
 
-    if (!head || !*head)
-        return (1);
-    h = *head;
     while (h)
     {
         h->prev = tmp;
