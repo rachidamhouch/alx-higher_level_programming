@@ -5,10 +5,8 @@
 int is_palindrome(listint_t **head)
 {
     listint_t   *h = *head;
-    int         T[4000], len = 0, i = 0;
+    int         T[3000], len = 0, i = 0;
 
-    if (!head || !*head)
-        return (1);
     while (h)
     {
         T[len] = h->n;
