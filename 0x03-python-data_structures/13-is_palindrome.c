@@ -13,7 +13,8 @@ int is_palindrome(listint_t **head)
         len++;
         h = h->next;
     }
-    len--;
+    if (len)
+        len--;
     while (i < len)
     {
         if (T[len] != T[i])
