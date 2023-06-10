@@ -7,14 +7,15 @@ int is_palindrome(listint_t **head)
     listint_t   *h = *head;
     int         T[1000], len = 0, i = 0;
 
+    if (!head || !*head)
+        return (1);
     while (h)
     {
         T[len] = h->n;
         len++;
         h = h->next;
     }
-    if (len)
-        len--;
+    len--;
     while (i < len)
     {
         if (T[len] != T[i])
