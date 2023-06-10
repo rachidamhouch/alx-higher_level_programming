@@ -4,29 +4,22 @@
 
 int is_palindrome(listint_t **head)
 {
-    listint_t   *h = *head, *tmp;
-    int         i = 0, len = 0, n;
+    listint_t   *h = *head;
+    int         T[100], len = 0, i = 0;
+
     while (h)
     {
-        h = h->next;
+        T[len] = h->n;
         len++;
+        h = h->next;
     }
-    h = *head;
-    while (i < len / 2)
+    len--;
+    while (i < len)
     {
-        tmp = h;
-        n = i;
-        while (1)
-        {
-            n++;
-            if (n >= len - i)
-                break;
-            tmp = tmp->next;
-        }
-        if (h->n != tmp->n)
+        if (T[len] != T[i])
             return (0);
         i++;
-        h = h->next;
+        len--;
     }
     return (1);
 }
