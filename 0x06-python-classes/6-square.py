@@ -48,11 +48,10 @@ tuple of 2 positive integers")
     def my_print(self):
         """Size my_print"""
         for i in range(self.__position[1]):
-            print(" ")
-        if not self.__size:
             print()
-            return
         for i in range(self.__size):
             print(" " * self.__position[0], end="")
             print("#" * self.__size)
+        if not self.__size:
+            print()
 
